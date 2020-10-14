@@ -1,5 +1,6 @@
 # README file for WEEK 5: SERVICE CONSUMPTION AND WEB APIS
-In week 5, you are going to ...    
+In week 5, you are going to build a side-by-side extension using the service consumption of an OData service provided by an SAP backend system. 
+
 
 # HANDS-ON EXERCISES
 The information on the hands-on exercises for week 5 will be made available in a timely manner.
