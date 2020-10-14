@@ -1,5 +1,5 @@
 # READme file for WEEK 2: DEVELOPING A READ-ONLY LIST REPORT APP
-In week 2, you are going to build a read-only SAP Fiori elements-based Travel List Report app using the _managed_ implementation.
+In week 2, you are going to build a UI service for a read-only SAP Fiori elements-based Travel List Report app using the _managed_ implementation from scratch (i.e. greenfield implementation).
 
 # HANDS-ON EXERCISES
 The information on the hands-on exercises for week 2 will be made available in a timely manner.
