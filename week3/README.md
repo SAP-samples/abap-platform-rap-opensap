@@ -1,5 +1,6 @@
 # README file for WEEK 3: ENABLING THE TRANSACTIONAL BEHAVIOR OF AN APP
-In week 3, you are going to enable the Travel app built in week 2 for transactional handling.    
+In week 3, you are going to enable the transactional handling in the UI service of the SAP Fiori elements-based Travel List Report app
+built in [week 2](/week2/README.md).  
 
 # HANDS-ON EXERCISES
 The information on the hands-on exercises for week 3 will be made available in a timely manner.
