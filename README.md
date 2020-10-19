@@ -1,8 +1,12 @@
 # Welcome to the ABAP RESTful Application Programming Model (RAP) openSAP samples
 
 ## Description
-This repository offers optional hands-on exercises for the free openSAP Course **[Building Apps with the ABAP RESTful Application Programming Model (RAP)](https://open.sap.com/courses/cp13)**, starting October 19, 2020.
+This repository offers optional hands-on exercises for the free openSAP Course **[Building Apps with the ABAP RESTful Application Programming Model (RAP)](https://open.sap.com/courses/cp13)**.   
+     
+Live course period: October 19, 2020 - December 1, 2020
 
+>**Please note:**  
+>The information will be made available in the sections below at the beginning of the relevant week during the live course periode.
     
 ## Requirements
 Watch the videos of the course **Building Apps with the ABAP RESTful Application Programming Model (RAP)** available on the openSAP platform. _([Free access to the openSAP course](https://open.sap.com/courses/cp13))_    
