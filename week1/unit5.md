@@ -44,14 +44,18 @@ In case you have already onboarded to the SAP Cloud Platform ABAP environment tr
     
     ![Download Service Key](images/w1u5_03_03.png)
     
-5. Now, go to the instance **default_abap-trial** and click on the arrow (>) on the right-hand side as shown on the screenshot.  
+5. Now, go to the instance **default_abap-trial** and click on the arrow (>) on the right-hand side as shown on the screenshot to open a side panel with further instance details.  
     
     ![Download Service Key](images/w1u5_03_04.png)
     
-6.  The side panel will open, with further Instance details.  
-    Go to the **Service Keys** area and download your service key.  
+6.  In the side panel, go to the **Service Keys** area and download your service key.  
     
     ![Download Service Key](images/w1u5_03_05.png)
+        
+        
+    **In case no service key is available**, then create a new one as shown on the screenshot and download it.
+
+    ![Download Service Key](images/w1u5_03_06.png)
 
 
 ## Summary
