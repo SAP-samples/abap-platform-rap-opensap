@@ -86,7 +86,7 @@ A Travel entity defines general travel data, such as the agency ID or customer I
     @EndUserText.label : 'Travel data'
     @AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
     @AbapCatalog.tableCategory : #TRANSPARENT
-    @AbapCatalog.deliveryClass : #C
+    @AbapCatalog.deliveryClass : #A
     @AbapCatalog.dataMaintenance : #RESTRICTED
     define table zrap_atrav_#### {
       key client            : mandt not null;
@@ -158,7 +158,7 @@ A Booking entity comprises general flight and booking data, the customer ID for 
     @EndUserText.label : 'Booking data'
     @AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
     @AbapCatalog.tableCategory : #TRANSPARENT
-    @AbapCatalog.deliveryClass : #C
+    @AbapCatalog.deliveryClass : #A
     @AbapCatalog.dataMaintenance : #RESTRICTED
     define table zrap_abook_#### {
       key client            : mandt not null;
