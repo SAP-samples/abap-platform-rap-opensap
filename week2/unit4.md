@@ -221,7 +221,7 @@ Now, you will create the missing Booking BO projection view (aka consumption vie
     -	The view element **`CurrencyCode`** is specified as reference field for the currency field **`FlightPrice`**. 
     -	The view elements **`CreatedBy`** and **`LastChangedBy`** have been removed from the projection list because they only have an administrative function and will be of no use in our scenario. The view element **`LocalLastChangedAt`** remains in the projection list because it will be used for the transactional enablement of Your Travel List Report App in week 3 – especially for the implementation of the optimistic lock.  
     -	All associations have been exposed in the projection list.
-    -	The association to the travel BO child node has been redirected to the appropriate Travel BO projection view using the  **`redirect to parent`**  statement. 
+    -	The association to the travel BO parent node has been redirected to the appropriate Travel BO projection view using the  **`redirected to parent`**  statement. 
 
 ## Step 3. Activate the CDS Data Model Projection & Run the Data Preview 
 To avoid error during the activation, both new CDS interface views – i.e. Travel view and Booking view – must be activated together for the first time.  
