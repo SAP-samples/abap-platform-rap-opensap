@@ -377,6 +377,8 @@ CLASS zcl_generate_week2_#### IMPLEMENTATION.
                      not_null  = 'X' )
                    ( field = 'booking_id'
                      data_element      = '/dmo/booking_id' )
+                   ( field = 'booking_date'
+                     data_element      = '/dmo/booking_date' )  
                    ( field = 'customer_id'
                      data_element      = '/dmo/customer_id' )
                    ( field = 'carrier_id'
