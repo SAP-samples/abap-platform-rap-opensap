@@ -957,11 +957,11 @@ You are now going to implement the authorization master in the behavior implemen
     Do not forget to replace the placeholder **`####`** with your chosen suffix.  
     
     <pre>
-      DATA: has_before_image    TYPE abap_bool,
-             is_update_requested TYPE abap_bool,
-             is_delete_requested TYPE abap_bool,
-             update_granted      TYPE abap_bool,
-             delete_granted      TYPE abap_bool.
+     DATA: has_before_image    TYPE abap_bool,
+           is_update_requested TYPE abap_bool,
+           is_delete_requested TYPE abap_bool,
+           update_granted      TYPE abap_bool,
+           delete_granted      TYPE abap_bool.
 
      DATA: failed_travel LIKE LINE OF failed-travel.
 
