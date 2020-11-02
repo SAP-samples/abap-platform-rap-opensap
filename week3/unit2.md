@@ -114,8 +114,8 @@ First adjust the behavior definition for the Travel entity **`ZI_RAP_Travel_####
        ![Adjust Behavior Definition](images/w3u2_02_01.png)
 
     <pre>
-    define behavior for ZI_RAP_Travel_1234 alias Travel
-    persistent table zrap_atrav_1234
+    define behavior for ZI_RAP_Travel_#### alias Travel
+    persistent table zrap_atrav_####
     lock master
     //authorization master ( instance )
     etag master LocalLastChangedAt
@@ -127,7 +127,7 @@ First adjust the behavior definition for the Travel entity **`ZI_RAP_Travel_####
 
       field ( numbering : managed, readonly ) TravelUUID;
 
-      mapping for zrap_atrav_1234
+      mapping for zrap_atrav_####
       {
         TravelUUID         = travel_uuid;
         TravelID           = travel_id;
@@ -222,8 +222,8 @@ Now, adjust the behavior definition for the Booking entity **`ZI_RAP_Booking_###
     ![Adjust Behavior Definition](images/w3u2_03_01.png)
 
     <pre>
-    define behavior for ZI_RAP_Booking_1234 alias Booking
-    persistent table zrap_abook_1234
+    define behavior for ZI_RAP_Booking_#### alias Booking
+    persistent table zrap_abook_####
     lock dependent by _Travel
     //authorization dependent by <association>
     etag master LocalLastChangedAt
@@ -236,7 +236,7 @@ Now, adjust the behavior definition for the Booking entity **`ZI_RAP_Booking_###
       field ( numbering : managed, readonly ) BookingUUID;
       field ( readonly ) TravelUUID;
 
-      mapping for zrap_abook_1234
+      mapping for zrap_abook_####
       {
         BookingUUID        = booking_uuid;
         TravelUUID         = travel_uuid;
@@ -285,7 +285,7 @@ In this unit, you have learned how to
 Find the source code of the created CDS behavior definition **[sources](/week3/sources)** folder:
    - [W3U2_BDEF_ZI_RAP_TRAVEL_####](/week3/sources/W3U2_BDEF_ZRAP_I_TRAVEL_.txt)    
     
-Do not forget to replace all the occurrences of ‘####’ with your chosen suffix in the copied source code.
+Do not forget to replace all the occurrences of `####` with your chosen suffix in the copied source code.
  
 ## Next exercise
 [Week 3 Unit 3: Creating the Business Object Behavior Projection](unit3.md)
