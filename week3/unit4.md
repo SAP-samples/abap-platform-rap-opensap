@@ -107,7 +107,7 @@ The first EML example performs a READ operation.
         READ ENTITIES OF ZI_RAP_Travel_####
           ENTITY travel
             FIELDS ( AgencyID CustomerID )
-          WITH VALUE #( ( TravelUUID = '<your uuid>' ) )
+          WITH VALUE #( ( TravelUUID = '&ltyour uuid&gt' ) )
           RESULT DATA(travels).
         out->write( travels ).
     </pre>
@@ -132,7 +132,7 @@ The first EML example performs a READ operation.
         READ ENTITIES OF ZI_RAP_Travel_####
           ENTITY travel
             ALL FIELDS 
-          WITH VALUE #( ( TravelUUID = '<your uuid>' ) )
+          WITH VALUE #( ( TravelUUID = '&ltyour uuid&gt' ) )
           RESULT DATA(travels).
 
         out->write( travels ).
@@ -159,7 +159,7 @@ The first EML example performs a READ operation.
         " step 4 - READ By Association
         READ ENTITIES OF ZI_RAP_Travel_####
           ENTITY travel BY \_Booking
-            ALL FIELDS WITH VALUE #( ( TravelUUID = '<your uuid>' ) )
+            ALL FIELDS WITH VALUE #( ( TravelUUID = '&ltyour uuid&gt' ) )
           RESULT DATA(bookings).
 
         out->write( bookings ).
@@ -228,7 +228,7 @@ Now you will implement and perform some modifying operations.
           ENTITY travel
             UPDATE
               SET FIELDS WITH VALUE
-                #( ( TravelUUID  = '<your uuid>'
+                #( ( TravelUUID  = '&ltyour uuid&gt'
                      Description = 'I like RAP@openSAP' ) )
 
          FAILED DATA(failed)
@@ -337,7 +337,7 @@ Deletions are performed using the **`MODIFY ENTITIES`** statement with the **`DE
           ENTITY travel
             DELETE FROM
               VALUE
-                #( ( TravelUUID  = '<your uuid>' ) )
+                #( ( TravelUUID  = '&ltyour uuid&gt' ) )
 
          FAILED DATA(failed)
          REPORTED DATA(reported).
@@ -373,7 +373,7 @@ In this unit, you have learned the basic syntax of the entity manipulation langu
 Find the source code of the created ABAP Class **[sources](/week3/sources)** folder:  
 -	[W3U4_CLAS_ZCL_RAP_EML_####](/week3/sources/W3U4_CLAS_ZCL_RAP_EML.txt)     
     
-Do not forget to replace all the occurrences of ‘####’ with your chosen suffix in the copied source code.  
+Do not forget to replace all the occurrences of `####` with your chosen suffix in the copied source code.  
 
 ## Next exercise
 [Week 3 Unit 5: Enhancing the Business Object Behavior with App-Specific Logic](unit5.md)
