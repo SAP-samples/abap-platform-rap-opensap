@@ -216,7 +216,7 @@ Now, you will create the missing Booking BO projection view (aka consumption vie
     -	The view columns **`BookingID`** and **`CustomerID`** are enabled for freestyle search.  
     The view elements **`CustomerName`** and **`CarrierName`** from the associations **`_Customer_`** and **`_Carrier`** respectively have been added to the projection list.  
     They are specified as  textual description for the view elements **`CustomerID`** and **`CarrierID`** respectively using the annotation **`@ObjectModel.text.element`**.  
-    -	Value helps are specified for the view elements **`CustomerID`**, **`CarrierID`**, **`ConnectionID`** and **`CurrencyCode`** using the annotation **`@Consumption.ValueHelpDefinntion`**.  
+    -	Value helps are specified for the view elements **`CustomerID`**, **`CarrierID`**, **`ConnectionID`** and **`CurrencyCode`** using the annotation **`@Consumption.valueHelpDefinition`**.  
     In the value help definition of the element **`ConnectionID`**, an additional binding condition is defined for returning values from the selected value help record for the local view elements **`CarrierID`**, **`FlightDate`**, **`FlightPrice`** and **`Currency`**.
     -	The view element **`CurrencyCode`** is specified as reference field for the currency field **`FlightPrice`**. 
     -	The view elements **`CreatedBy`** and **`LastChangedBy`** have been removed from the projection list because they only have an administrative function and will be of no use in our scenario. The view element **`LocalLastChangedAt`** remains in the projection list because it will be used for the transactional enablement of Your Travel List Report App in week 3 – especially for the implementation of the optimistic lock.  
