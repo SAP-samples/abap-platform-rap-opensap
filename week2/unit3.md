@@ -243,7 +243,7 @@ Our composition model consists of two nodes: The root node travel and its child 
 2.	Adjust the definition of the **`_Booking`** association to a composition which is needed to define the relationship from a parent node (travel) to a child node (booking). 
 For that, replace the definition of the association **`_Booking`** with the following composition definition:  
     <pre>
-       composition [0..*] of ZI_RAP_Booking_1234 as _Booking 
+       composition [0..*] of ZI_RAP_Booking_#### as _Booking 
     </pre>
 
 3.	Save ![save icon](images/adt_save.png) the changes, but **DO NOT** yet activate the changes. 
@@ -254,7 +254,7 @@ For that, replace the definition of the association **`_Booking`** with the foll
 4.	Now open the CDS data definition **`ZI_RAP_BOOKING_####`** and replace the definition of the association **`_Travel`** with the definition provided below to specify the relationship from the child node (_booking_) to its parent node (_travel_). 
 
     <pre>
-      association to parent ZI_RAP_Travel_1234        as _Travel     on  $projection.TravelUUID = _Travel.TravelUUID
+      association to parent ZI_RAP_Travel_####        as _Travel     on  $projection.TravelUUID = _Travel.TravelUUID
     </pre>
 
     ![Define BO Structure](images/w2u3_03_02.png)
