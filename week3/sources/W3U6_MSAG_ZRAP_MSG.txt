@@ -1,0 +1,14 @@
+001
+Begin date &1 must not be after end date &2 for travel &3
+
+002
+Begin date &1 must be on or after system date
+
+003
+Customer &1 unknown
+
+004
+Agency &1 unknown
+
+005
+You are not authorized to perform this activity

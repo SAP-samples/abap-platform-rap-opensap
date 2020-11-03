@@ -24,4 +24,5 @@ There is no hands-on exercise available for this unit.
 ## Week 1 Unit 6: Creating Your First ABAP Cloud Console App
 [Link to the hands-on exercise.](unit6.md)
         
-
+## Additional Reading Material
+For more information, links to documentation, and more, please visit the [RAP at openSAP information page](https://community.sap.com/topics/cloud-platform-abap-environment/rap-opensap).    

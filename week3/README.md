@@ -1,9 +1,35 @@
 # README file for WEEK 3: ENABLING THE TRANSACTIONAL BEHAVIOR OF AN APP
-In week 3, you are going to enable the transactional handling in the UI service of the SAP Fiori elements-based Travel List Report app
-built in [week 2](/week2/README.md).  
+In week 3, you are going to enable the Travel app built in [week 2](../week2/README.md) for transactional handling.   
 
+    
 # HANDS-ON EXERCISES
-The information on the hands-on exercises for week 3 will be made available in a timely manner.
+Find the links to the different hands-on exercises below.
 
-## License
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
+## Week 3 Unit 1: The Enhanced Business Scenario  
+There is no hands-on exercise provided for this unit, but you can watch the [corresponding video](https://open.sap.com/courses/cp13/items/6KHoJRFMoCjT94LlSBCXQa) on openSAP.com.
+
+## Week 3 Unit 2: Defining the Basic Business Object Behavior  
+[Link to the hands-on exercise.](unit2.md)
+
+## Week 3 Unit 3: Creating the Business Object Behavior Projection  
+[Link to the hands-on exercise.](unit3.md)
+    
+## Week 3 Unit 4: Understanding Entity Manipulation Language (EML)    
+[Link to the hands-on exercise.](unit4.md)
+    
+## Week 3 Unit 5: Enhancing the Business Object Behavior with App-Specific Logic
+[Link to the hands-on exercise.](unit5.md)
+    
+## Week 3 Unit 6: Implementing the Business Object Behavior   
+[Link to the hands-on exercise.](unit6.md)
+     
+## Week 3 Unit 7: Enabling Draft Handling  
+[Link to the hands-on exercise.](unit7.md)
+
+## Week 3 Unit 8: Troubleshooting Your SAP Fiori App  
+There is no hands-on exercise provided for this unit, but you can watch the [corresponding video](https://open.sap.com/courses/cp13/items/18J1uApLLw5amJxasHMYra) on openSAP.com.
+        
+## Additional Reading Material
+For more information, links to documentation, and more, please visit the [RAP at openSAP information page](https://community.sap.com/topics/cloud-platform-abap-environment/rap-opensap).     
+
+    
