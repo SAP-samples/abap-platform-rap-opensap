@@ -28,9 +28,11 @@ First create the new ABAP package **`ZRAP_TRAVEL_####`** (where `####` is your c
   
 2. Maintain **`ZRAP_TRAVEL_####`** as name (where `####` is your chosen suffix) and a meaningful description (e.g. _**Greenfield Implementation - Travel List Report App**_) and choose **Next** to continue.  
 The Project and the Superpackage fields are automatically assigned.
+
+> Note: In some instances the Superpackage field is not automatically assigned. You then have to browse and search for the package or enter the name of the superpackage manually.
    
 
-    ![Create ABAP Package](images/w2u2_01_02.png)
+   ![Create ABAP Package](images/w2u2_01_02.png)
     
   
 4. Select an existing transport request or create a new one and then choose **Finish** to create the new package.  
