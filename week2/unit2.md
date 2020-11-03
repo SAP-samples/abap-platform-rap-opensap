@@ -29,7 +29,7 @@ First create the new ABAP package **`ZRAP_TRAVEL_####`** (where `####` is your c
 2. Maintain **`ZRAP_TRAVEL_####`** as name (where `####` is your chosen suffix) and a meaningful description (e.g. _**Greenfield Implementation - Travel List Report App**_) and choose **Next** to continue.  
 The Project and the Superpackage fields are automatically assigned.
 
-> Note: In some instances the Superpackage field is not automatically assigned. You then have to browse and search for the package or enter the name of the superpackage manually.
+> Note: In some instances the Superpackage field is not automatically assigned. You then have to browse and search for the package or enter the name of the superpackage manually. It is the package **`ZRAP_####`** (where `####` is your chosen suffix) created in week 1 unit 6.  
    
 
    ![Create ABAP Package](images/w2u2_01_02.png)
