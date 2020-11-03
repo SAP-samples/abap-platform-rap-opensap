@@ -68,4 +68,4 @@ In this unit, you have learned
 - How to find and download the Service Key in the SAP Cloud Platform trial cockpit
 
 ## Next Exercise
-[Week 1 Unit 6: Creating Your First ABAP Cloud Console App](https://github.tools.sap/D040081/abap-platform-rap-opensap/blob/master/week1/unit6.md)
+[Week 1 Unit 6: Creating Your First ABAP Cloud Console App](unit6.md)
