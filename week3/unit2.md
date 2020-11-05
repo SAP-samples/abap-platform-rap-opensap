@@ -70,7 +70,7 @@ First adjust the behavior definition for the Travel entity **`ZI_RAP_Travel_####
     <pre> lock master</pre>    
 
 4.	Enable the so-called optimistic lock – aka _ETag handling_ – for the Travel entity.  
-    For that, uncomment the **`etag master`** statement and replace the **`<field_name>`**  to **`LastChangedAt`** in it.  
+    For that, uncomment the **`etag master`** statement and replace the **`<field_name>`**  to **`LocalLastChangedAt`** in it.  
 
     <pre>etag master LocalLastChangedAt</pre>
 
@@ -169,7 +169,7 @@ Now, adjust the behavior definition for the Booking entity **`ZI_RAP_Booking_###
     > As already mentioned above, the lock is handled generically by the framework in the managed scenario.
 
 4.	Enable the so-called optimistic lock for the Booking entity.     
-    For that, uncomment the **`etag master`** statement and replace the **`<field_name>`**  to **`LastChangedAt`** in it.  
+    For that, uncomment the **`etag master`** statement and replace the **`<field_name>`**  to **`LocalLastChangedAt`** in it.  
 
     <pre>etag master LocalLastChangedAt</pre>
          
