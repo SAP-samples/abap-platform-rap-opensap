@@ -5,7 +5,7 @@
                 title: { type: #STANDARD, label: 'Travel', value: 'TravelID' } },
   presentationVariant: [{ sortOrder: [{ by: 'TravelID', direction:  #DESC }] }] }
 
-annotate view ZC_RAP_Travel_1234 with
+annotate view ZC_RAP_Travel_#### with
 {
   @UI.facet: [ { id:              'Travel',
                  purpose:         #STANDARD,
