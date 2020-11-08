@@ -1,7 +1,7 @@
 @EndUserText.label : 'Booking data'
 @AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
 @AbapCatalog.tableCategory : #TRANSPARENT
-@AbapCatalog.deliveryClass : #C
+@AbapCatalog.deliveryClass : #A
 @AbapCatalog.dataMaintenance : #RESTRICTED
 define table zrap_abook_#### {
   key client            : mandt not null;

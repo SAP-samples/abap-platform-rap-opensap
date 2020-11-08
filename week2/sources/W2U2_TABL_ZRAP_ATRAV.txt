@@ -1,7 +1,7 @@
 @EndUserText.label : 'Travel data'
 @AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
 @AbapCatalog.tableCategory : #TRANSPARENT
-@AbapCatalog.deliveryClass : #C
+@AbapCatalog.deliveryClass : #A
 @AbapCatalog.dataMaintenance : #RESTRICTED
 define table zrap_atrav_#### {
   key client            : mandt not null;

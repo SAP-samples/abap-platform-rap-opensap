@@ -25,4 +25,8 @@ There is no hands-on exercise provided for this unit, but you can watch the [cor
 ## Week 2 Unit 7:	Implementing Basic Authorizations  
 [Link to the hands-on exercise.](unit7.md)
         
-
+## Additional Reading Material
+For more information, links to documentation, and more, please visit the [RAP at openSAP information page](https://community.sap.com/topics/cloud-platform-abap-environment/rap-opensap).     
+        
+## License
+Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.

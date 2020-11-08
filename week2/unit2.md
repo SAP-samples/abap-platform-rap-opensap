@@ -8,7 +8,7 @@ You can watch [week 2 unit 2: Creating the Database Tables](https://open.sap.com
      
 > **Hints and Tips**    
 > Speed up the typing by making use of the Code Completion feature (shortcut *Ctrl+Space*) and the prepared code snippets provided. 
-> You can easily open an object with the shortcut *Ctrl+Shift+A*, format your source code using the Pretty Printer feature *Ctrl+1* and toggle the fullscreen of the editor using the shortcut *Ctrl+M*.   
+> You can easily open an object with the shortcut *Ctrl+Shift+A*, format your source code using the Pretty Printer feature *Shift+F1* and toggle the fullscreen of the editor using the shortcut *Ctrl+M*.   
 >
 > A great overview of ADT shortcuts can be found here: [Useful ADT Shortcuts](https://blogs.sap.com/2013/11/21/useful-keyboard-shortcuts-for-abap-in-eclipse/)
 >
@@ -28,9 +28,11 @@ First create the new ABAP package **`ZRAP_TRAVEL_####`** (where `####` is your c
   
 2. Maintain **`ZRAP_TRAVEL_####`** as name (where `####` is your chosen suffix) and a meaningful description (e.g. _**Greenfield Implementation - Travel List Report App**_) and choose **Next** to continue.  
 The Project and the Superpackage fields are automatically assigned.
+
+> Note: In some instances the Superpackage field is not automatically assigned. You then have to browse and search for the package or enter the name of the superpackage manually. It is the package **`ZRAP_####`** (where `####` is your chosen suffix) created in week 1 unit 6.  
    
 
-    ![Create ABAP Package](images/w2u2_01_02.png)
+   ![Create ABAP Package](images/w2u2_01_02.png)
     
   
 4. Select an existing transport request or create a new one and then choose **Finish** to create the new package.  
@@ -86,7 +88,7 @@ A Travel entity defines general travel data, such as the agency ID or customer I
     @EndUserText.label : 'Travel data'
     @AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
     @AbapCatalog.tableCategory : #TRANSPARENT
-    @AbapCatalog.deliveryClass : #C
+    @AbapCatalog.deliveryClass : #A
     @AbapCatalog.dataMaintenance : #RESTRICTED
     define table zrap_atrav_#### {
       key client            : mandt not null;
@@ -158,7 +160,7 @@ A Booking entity comprises general flight and booking data, the customer ID for 
     @EndUserText.label : 'Booking data'
     @AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
     @AbapCatalog.tableCategory : #TRANSPARENT
-    @AbapCatalog.deliveryClass : #C
+    @AbapCatalog.deliveryClass : #A
     @AbapCatalog.dataMaintenance : #RESTRICTED
     define table zrap_abook_#### {
       key client            : mandt not null;

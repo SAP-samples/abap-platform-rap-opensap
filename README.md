@@ -1,4 +1,5 @@
 # Welcome to the ABAP RESTful Application Programming Model (RAP) openSAP samples
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/abap-platform-rap-opensap)](https://api.reuse.software/info/github.com/SAP-samples/abap-platform-rap-opensap)    
 
 ## Description
 This repository offers optional hands-on exercises for the free openSAP Course **[Building Apps with the ABAP RESTful Application Programming Model (RAP)](https://open.sap.com/courses/cp13)**.       
@@ -34,4 +35,3 @@ Find the various hands-on exercises for this week in folder **[week5](/week5/REA
 ## License
 Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
             
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/abap-platform-rap-opensap)](https://api.reuse.software/info/github.com/SAP-samples/abap-platform-rap-opensap)    
