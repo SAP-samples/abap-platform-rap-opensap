@@ -919,7 +919,7 @@ METHOD cba_Booking.
           ELSE.
 
 
-            INSERT VALUE #( %cid = <entity>-%cid travelid = travelid ) INTO TABLE failed-booking.
+            INSERT VALUE #( %cid = &ltentity&gt-%cid travelid = travelid ) INTO TABLE failed-booking.
  
             LOOP AT messages INTO DATA(message) WHERE msgty = 'E' OR msgty = 'A'.
 
