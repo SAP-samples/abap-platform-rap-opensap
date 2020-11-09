@@ -1,0 +1,14 @@
+@EndUserText.label : 'Mapping control structure'
+@AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
+define structure zsrap_travel_x_#### {
+  agency_id     : xsdboolean;
+  customer_id   : xsdboolean;
+  begin_date    : xsdboolean;
+  end_date      : xsdboolean;
+  booking_fee   : xsdboolean;
+  total_price   : xsdboolean;
+  currency_code : xsdboolean;
+  description   : xsdboolean;
+  status        : xsdboolean;
+
+}

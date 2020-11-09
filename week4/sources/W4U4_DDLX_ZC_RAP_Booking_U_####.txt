@@ -1,0 +1,51 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Booking',
+    typeNamePlural: 'Bookings',
+    title: {
+      type: #STANDARD,
+      label: 'Booking',
+      value: 'BookingID'
+    }
+  }
+}
+annotate view ZC_RAP_Booking_U_#### with
+{
+  @UI.facet: [ { id:            'Booking',
+                 purpose:       #STANDARD,
+                 type:          #IDENTIFICATION_REFERENCE,
+                 label:         'Booking',
+                 position:      10 } ]
+
+  @UI.hidden: true
+  TravelID;
+
+  @UI: { lineItem:        [ { position: 10 } ],
+         identification:  [ { position: 10 } ]  }
+  BookingID;
+
+  @UI: { lineItem:        [ { position: 20 } ],
+         identification:  [ { position: 20 } ]  }
+  BookingDate;
+
+  @UI: { lineItem:        [ { position: 30 } ],
+         identification:  [ { position: 30 } ]  }
+  CustomerID;
+
+  @UI: { lineItem:        [ { position: 40 } ],
+         identification:  [ { position: 40 } ]  }
+  CarrierID;
+
+  @UI: { lineItem:        [ { position: 50 } ],
+         identification:  [ { position: 50 } ]  }
+  ConnectionID;
+
+  @UI: { lineItem:        [ { position: 60 } ],
+         identification:  [ { position: 60 } ]  }
+  FlightDate;
+
+  @UI: { lineItem:        [ { position: 70 } ],
+         identification:  [ { position: 70 } ]  }
+  FlightPrice;
+}
