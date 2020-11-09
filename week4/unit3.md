@@ -1051,14 +1051,361 @@ Save ![Save](images/adt_save.png) and Activate ![Activate](images/adt_activate.p
 
 
 
+## Step6. Implement the methods for the Booking entity
+
+Now we create the behavior implementation class for the Booking entity.  
+
+1. Activate your behavior definition by pressing the **Activate** button ![Activate](images/adt_activate.png) if you have not already done so. 
+
+2. In order to create the behavior implementation class for the booking entity, we can also use a quick fix. We can select the class name in the behavior definition and press CTRL + 1.
+   - Select the name of the behavior implementation class `zbp_i_rap_booking_u_####`
+   - Press **Ctrl+1**
+   - Double click on the proposal `Create behavior implementation class`**`zbp_i_rap_booking_u_####`**
+
+   ![Create behavior implementation class Booking](images/w4u3_06_01.png)
+
+3. In the **New behavior class** dialogue create the behavior implementation class for the **Booking** entity and press **Next**.
+
+   ![Create behavior implementation class Booking](images/w4u3_06_02.png)
+  
+4. Selection of a transport request
+   - Select a transport request
+   - Press **Finish**
+   
+   ![Select transport request](images/w4u3_06_03.png)
+
+5. Check the generated code template of the Travel BIL:
+
+   for example you see  
+   - a delete method that will be called when deleting a booking entity and 
+   - a update method if a booking entity is going to be updated,
+   from the signature.
+   
+   > Please note that this is a **local class** `lhc_Booking` which inherits from `cl_abap_behavior_handler`.
+   
+   ![Gnerated BIL class](images/w4u3_06_04.png)
+   
+6.  We will start by implementing the **delete** method and use the prepared coding. 
+
+
+### delete
+
+The delete methods get a list of keys `travelid` and `bookingid` of the booking entities that shall be deleted. To delete booking entities using the legacy API we will use the function module `/DMO/FLIGHT_TRAVEL_UPDATE`. 
+
+<pre>
+  METHOD delete.
+
+    DATA messages TYPE /dmo/t_message.
+
+    LOOP AT keys ASSIGNING FIELD-SYMBOL(&ltkey&gt).
+
+      CALL FUNCTION '/DMO/FLIGHT_TRAVEL_UPDATE'
+        EXPORTING
+          is_travel   = VALUE /dmo/s_travel_in( travel_id = &ltkey&gt-travelid )
+          is_travelx  = VALUE /dmo/s_travel_inx( travel_id = &ltkey&gt-travelid )
+          it_booking  = VALUE /dmo/t_booking_in( ( booking_id = &ltkey&gt-bookingid ) )
+          it_bookingx = VALUE /dmo/t_booking_inx( ( booking_id  = &ltkey&gt-bookingid
+                                                    action_code = /dmo/if_flight_legacy=&gtaction_code-delete ) )
+        IMPORTING
+          et_messages = messages.
+
+      IF messages IS INITIAL.
+
+        APPEND VALUE #( travelid = &ltkey&gt-travelid
+                       bookingid = &ltkey&gt-bookingid ) TO mapped-booking.
+
+      ELSE.
+
+        "fill failed return structure for the framework
+        APPEND VALUE #( travelid = &ltkey&gt-travelid
+                        bookingid = &ltkey&gt-bookingid ) TO failed-booking.
+
+        LOOP AT messages INTO DATA(message).
+          "fill reported structure to be displayed on the UI
+          APPEND VALUE #( travelid = &ltkey&gt-travelid
+                          bookingid = &ltkey&gt-bookingid
+                  %msg = new_message( id = message-msgid
+                                                number = message-msgno
+                                                v1 = message-msgv1
+                                                v2 = message-msgv2
+                                                v3 = message-msgv3
+                                                v4 = message-msgv4
+                                                severity = CONV #( message-msgty ) )
+         ) TO reported-booking.
+        ENDLOOP.
+
+
+
+      ENDIF.
+
+    ENDLOOP.
+
+  ENDMETHOD.
+</pre>
+
+Save ![Save](images/adt_save.png) and Activate ![Activate](images/adt_activate.png) your changes 
+
+### update
+
+The update method gets a table of type FOR UPDATE Booking.
+
+<pre>
+ METHOD update.
+
+    DATA messages TYPE /dmo/t_message.
+    DATA legacy_entity_in  TYPE /dmo/booking.
+    DATA legacy_entity_x TYPE /dmo/s_booking_inx.
+
+
+    LOOP AT entities ASSIGNING FIELD-SYMBOL(&ltentity&gt).
+
+      legacy_entity_in = CORRESPONDING #( &ltentity&gt MAPPING FROM ENTITY ).
+
+      legacy_entity_x-booking_id = &ltentity&gt-BookingID.
+      legacy_entity_x-_intx      = CORRESPONDING zsrap_booking_x_####( &ltentity&gt MAPPING FROM ENTITY ).
+      legacy_entity_x-action_code = /dmo/if_flight_legacy=&gtaction_code-update.
+
+      CALL FUNCTION '/DMO/FLIGHT_TRAVEL_UPDATE'
+        EXPORTING
+          is_travel   = VALUE /dmo/s_travel_in( travel_id = &ltentity&gt-travelid )
+          is_travelx  = VALUE /dmo/s_travel_inx( travel_id = &ltentity&gt-travelid )
+          it_booking  = VALUE /dmo/t_booking_in( ( CORRESPONDING #( legacy_entity_in ) ) )
+          it_bookingx = VALUE /dmo/t_booking_inx( ( legacy_entity_x ) )
+        IMPORTING
+          et_messages = messages.
+
+
+
+      IF messages IS INITIAL.
+
+        APPEND VALUE #( travelid = &ltentity&gt-travelid
+                       bookingid = legacy_entity_in-booking_id ) TO mapped-booking.
+
+      ELSE.
+
+        "fill failed return structure for the framework
+        APPEND VALUE #( travelid = &ltentity&gt-travelid
+                        bookingid = legacy_entity_in-booking_id ) TO failed-booking.
+        "fill reported structure to be displayed on the UI
+
+        LOOP AT messages INTO DATA(message).
+          "fill reported structure to be displayed on the UI
+          APPEND VALUE #( travelid = &ltentity&gt-travelid
+                          bookingid = legacy_entity_in-booking_id
+                  %msg = new_message( id = message-msgid
+                                                number = message-msgno
+                                                v1 = message-msgv1
+                                                v2 = message-msgv2
+                                                v3 = message-msgv3
+                                                v4 = message-msgv4
+                                                severity = CONV #( message-msgty ) )
+         ) TO reported-booking.
+        ENDLOOP.
+
+      ENDIF.
+
+    ENDLOOP.
+
+
+  ENDMETHOD.
+</pre>
+
+Save ![Save](images/adt_save.png) and Activate ![Activate](images/adt_activate.png) your changes 
+
+### read
+
+The `read` method gets a list of keys of booking entities whose data should be read. The legacy API, the funcion module `/DMO/FLIGHT_TRAVEL_READ` always reads all bookings for a TravelID. In order to avoid to call the legacy API, several times we are grouping the incoming keys by TravelID.
+
+<pre>
+
+METHOD read.
+
+    DATA: legacy_parent_entity_out TYPE /dmo/travel,
+          legacy_entities_out      TYPE /dmo/t_booking,
+          messages                 TYPE /dmo/t_message.
+
+    "Only one function call for each requested travelid
+    LOOP AT keys ASSIGNING FIELD-SYMBOL(&ltkey_parent&gt)
+                            GROUP BY &ltkey_parent&gt-travelid .
+
+      CALL FUNCTION '/DMO/FLIGHT_TRAVEL_READ'
+        EXPORTING
+          iv_travel_id = &ltkey_parent&gt-travelid
+        IMPORTING
+          es_travel    = legacy_parent_entity_out
+          et_booking   = legacy_entities_out
+          et_messages  = messages.
+
+      IF messages IS INITIAL.
+        "For each travelID find the requested bookings
+        LOOP AT GROUP &ltkey_parent&gt ASSIGNING FIELD-SYMBOL(&ltkey&gt)
+                                       GROUP BY &ltkey&gt-%key.
+
+          READ TABLE legacy_entities_out INTO DATA(legacy_entity_out) WITH KEY travel_id  = &ltkey&gt-%key-TravelID
+                                                                   booking_id = &ltkey&gt-%key-BookingID .
+          "if read was successfull
+          "fill result parameter with flagged fields
+          IF sy-subrc = 0.
+
+            INSERT CORRESPONDING #( legacy_entity_out MAPPING TO ENTITY ) INTO TABLE result.
+
+          ELSE.
+            "BookingID not found
+            INSERT
+              VALUE #( travelid    = &ltkey&gt-TravelID
+                       bookingid   = &ltkey&gt-BookingID
+                       %fail-cause = if_abap_behv=&gtcause-not_found )
+              INTO TABLE failed-booking.
+          ENDIF.
+        ENDLOOP.
+      ELSE.
+        "TravelID not found or other fail cause
+        LOOP AT GROUP &ltkey_parent&gt ASSIGNING &ltkey&gt.
+          failed-booking = VALUE #(  BASE failed-booking
+                                     FOR msg IN messages ( %key-TravelID    = &ltkey&gt-TravelID
+                                                             %key-BookingID   = &ltkey&gt-BookingID
+                                                             %fail-cause      = COND #( WHEN msg-msgty = 'E' AND ( msg-msgno = '016' OR msg-msgno = '009' )
+                                                                                        THEN if_abap_behv=&gtcause-not_found
+                                                                                        ELSE if_abap_behv=&gtcause-unspecific ) ) ).
+        ENDLOOP.
+
+      ENDIF.
+
+    ENDLOOP.
+
+  ENDMETHOD.
+
+</pre>
+
+Save ![Save](images/adt_save.png) and Activate ![Activate](images/adt_activate.png) your changes 
+
+### rba_travel
+
+This method reads the details of a parent travel entity when a booking entity is updated because we have defined in the behavior definition that the etag for the booking entity does depend on the etag of the parent entity Travel.
+
+<pre>
+define behavior for ZI_RAP_Booking_U_1234 alias Booking
+implementation in class zbp_i_rap_booking_u_1234 unique
+lock dependent by _Travel
+<b>etag dependent by _Travel</b>
+</pre>
+
+Looking at the signature of the method rba_travel (read by association) 
+
+<pre>
+METHODS rba_Travel FOR READ
+      IMPORTING
+         keys_rba FOR READ Booking\_Travel FULL result_requested RESULT result LINK association_links.
+</pre>
+
+we see that the import parameter `keys_rba` is basically a table that contains the two key fields `travelid` and `bookingid`.
+
+In addition there is a flag `result_requested` which controls whether only key pairs for the association have to be returned in a table `association_links` or if the target of the association with all fields shall be returned in the table `results`.
+
+The legacy API `/dmo/flight_travel_read` to read details about a Travel entity and its associated Bookings has been implemented such that information about a Booking entity can only be retrieved by providing the TravelID of the parent entity. 
+
+<pre>
+/dmo/flight_travel_read 		
+  importing	iv_travel_id 	type /dmo/travel_id 
+   	iv_include_buffer 	type abap_boolean default abap_true 
+  exporting	es_travel 	type /dmo/travel 
+   	et_booking 	type /dmo/t_booking 
+   	et_booking_supplement 	type /dmo/t_booking_supplement 
+    et_messages 	type /dmo/t_message 
+
+</pre>
+
+Therefore we first have to group the results first by travelid so that we avoid calling the legacy API for the same TravelID several times.
+
+<pre>
+  LOOP AT keys_rba ASSIGNING FIELD-SYMBOL(&ltfs_travel&gt)
+                                 GROUP BY &ltfs_travel&gt-TravelID.
+
+      CALL FUNCTION '/DMO/FLIGHT_TRAVEL_READ'
+        EXPORTING
+          iv_travel_id = &ltfs_travel&gt-%key-TravelID
+        IMPORTING
+          es_travel    = ls_travel_out
+          et_messages  = lt_message.
+
+        ….
+        
+  ENDLOOP.
+
+</pre>
+
+The statement 
+<pre>
+LOOP AT GROUP &ltfs_travel&gt ASSIGNING FIELD-SYMBOL(&ltfs_booking&gt).
+…
+ENDLOOP.
+</pre>
+then delivers the booking entities for one TravelID.
+
+<pre>
+
+METHOD rba_Travel.
+
+    DATA: ls_travel_out  TYPE /dmo/travel,
+          lt_booking_out TYPE /dmo/t_booking,
+          ls_travel      LIKE LINE OF result,
+          lt_message     TYPE /dmo/t_message.
+
+    "result  type table for read result /dmo/i_travel_u\\booking\_travel
+
+    "Only one function call for each requested travelid
+    LOOP AT keys_rba ASSIGNING FIELD-SYMBOL(&ltfs_travel&gt)
+                                 GROUP BY &ltfs_travel&gt-TravelID.
+
+      CALL FUNCTION '/DMO/FLIGHT_TRAVEL_READ'
+        EXPORTING
+          iv_travel_id = &ltfs_travel&gt-%key-TravelID
+        IMPORTING
+          es_travel    = ls_travel_out
+          et_messages  = lt_message.
+
+      IF lt_message IS INITIAL.
+
+        LOOP AT GROUP &ltfs_travel&gt ASSIGNING FIELD-SYMBOL(&ltfs_booking&gt).
+          "fill link table with key fields
+          INSERT VALUE #( source-%key = &ltfs_booking&gt-%key
+                          target-%key = ls_travel_out-travel_id )
+           INTO TABLE association_links .
+
+          IF  result_requested  = abap_true.
+            "fill result parameter with flagged fields
+            ls_travel = CORRESPONDING #(  ls_travel_out MAPPING TO ENTITY ).
+            INSERT ls_travel INTO TABLE result.
+          ENDIF.
+        ENDLOOP.
+
+      ELSE. "fill failed table in case of error
+        failed-booking = VALUE #(  BASE failed-booking
+                              FOR msg IN lt_message ( %key-TravelID    = &ltfs_travel&gt-%key-TravelID
+                                                      %key-BookingID   = &ltfs_travel&gt-%key-BookingID
+                                                      %fail-cause      = COND #( WHEN msg-msgty = 'E' AND ( msg-msgno = '016' OR msg-msgno = '009' )
+                                                                                 THEN if_abap_behv=&gtcause-not_found
+                                                                                ELSE if_abap_behv=&gtcause-unspecific ) ) ).
+      ENDIF.
+
+    ENDLOOP.
+
+  ENDMETHOD.
+
+ENDCLASS.
+
+</pre>
+
+Save ![Save](images/adt_save.png) and Activate ![Activate](images/adt_activate.png) your changes 
 
 ## Summary
 
 You have completed the exercise!  
 
-In this unit have defined an **unmanaged** RAP business object and you have implemented operations, namely **Create**, **Update**, **Delete**, **Read**, **Lock**, **CBA** and **RBA** implementiert hat. 
+In this unit have defined an **unmanaged** RAP business object and you have implemented operations, namely **Create**, **Update**, **Delete**, **Read**, **Lock**, **CBA** and **RBA** in both, the behavior implementation class for the Travel entity as well in the behavior implementation class for the Booking entity. 
 
 That was quite a lot of coding …
+
    
 ## Solution
 
