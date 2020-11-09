@@ -102,7 +102,9 @@ Now, create the service binding **`ZUI_RAP_TRAVEL_O2_####`** (where `####` is yo
      
     ![Create Service Binding](images/w2u6_02_04.png)
 
-4.	Click on **`Activate`** in the **Service Version Details** area to activate the Local Service Endpoint. This may take few seconds.
+4. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the service binding.	
+
+5. Click on **`Activate`** - or **`Publish`** depending on your ABAP release - in the **Service Version Details** area to activate the Local Service Endpoint. This may take few seconds.
  
     ![Create Service Binding](images/w2u6_02_05.png)
 
@@ -113,7 +115,7 @@ Now, create the service binding **`ZUI_RAP_TRAVEL_O2_####`** (where `####` is yo
     
     ![Create Service Binding](images/w2u6_02_06.png)
     
-5.	Click on the Service URL link to have a quick look at the service metadata document in the browser.  
+6.	Click on the Service URL link to have a quick look at the service metadata document in the browser.  
     Maintain your ABAP user credentials if required and choose **Log On**.  
     
     ![Create Service Binding](images/w2u6_02_07.png)
