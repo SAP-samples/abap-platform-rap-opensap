@@ -1057,7 +1057,9 @@ Now we create the behavior implementation class for the Booking entity.
 
 1. Activate your behavior definition by pressing the **Activate** button ![Activate](images/adt_activate.png) if you have not already done so. 
 
-2. In order to create the behavior implementation class for the booking entity, we can also use a quick fix. We can select the class name in the behavior definition and press CTRL + 1.
+2. In order to create the behavior implementation class for the booking entity, we can also use a quick fix. 
+
+
    - Select the name of the behavior implementation class `zbp_i_rap_booking_u_####`
    - Press **Ctrl+1**
    - Double click on the proposal `Create behavior implementation class`**`zbp_i_rap_booking_u_####`**
