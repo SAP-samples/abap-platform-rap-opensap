@@ -3,7 +3,7 @@ CLASS lhc_Booking DEFINITION INHERITING FROM cl_abap_behavior_handler.
 
     METHODS delete FOR MODIFY
       IMPORTING keys FOR DELETE Booking.
- 
+
     METHODS update FOR MODIFY
       IMPORTING entities FOR UPDATE Booking.
 
@@ -11,7 +11,8 @@ CLASS lhc_Booking DEFINITION INHERITING FROM cl_abap_behavior_handler.
       IMPORTING keys FOR READ Booking RESULT result.
 
     METHODS rba_Travel FOR READ
-      IMPORTING keys_rba FOR READ Booking\_Travel FULL result_requested RESULT result LINK association_links.
+      IMPORTING
+        keys_rba FOR READ Booking\_Travel FULL result_requested RESULT result LINK association_links.
 
 ENDCLASS.
 
@@ -27,9 +28,9 @@ CLASS lhc_Booking IMPLEMENTATION.
         EXPORTING
           is_travel   = VALUE /dmo/s_travel_in( travel_id = <key>-travelid )
           is_travelx  = VALUE /dmo/s_travel_inx( travel_id = <key>-travelid )
-          keys_rba    = VALUE /dmo/t_booking_in( ( booking_id = <key>-bookingid ) )
-          keys_rbax   = VALUE /dmo/t_booking_inx( ( booking_id  = <key>-bookingid
-                                                      action_code = /dmo/if_flight_legacy=>action_code-delete ) )
+          it_booking  = VALUE /dmo/t_booking_in( ( booking_id = <key>-bookingid ) )
+          it_bookingx = VALUE /dmo/t_booking_inx( ( booking_id  = <key>-bookingid
+                                                    action_code = /dmo/if_flight_legacy=>action_code-delete ) )
         IMPORTING
           et_messages = messages.
 
@@ -127,9 +128,9 @@ CLASS lhc_Booking IMPLEMENTATION.
 
   METHOD read.
 
-    DATA: legacy_parent_entity_out  TYPE /dmo/travel,
-          legacy_entities_out TYPE /dmo/t_booking,
-          messages     TYPE /dmo/t_message.
+    DATA: legacy_parent_entity_out TYPE /dmo/travel,
+          legacy_entities_out      TYPE /dmo/t_booking,
+          messages                 TYPE /dmo/t_message.
 
     "Only one function call for each requested travelid
     LOOP AT keys ASSIGNING FIELD-SYMBOL(<key_parent>)
