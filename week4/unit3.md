@@ -1076,7 +1076,7 @@ Now we create the behavior implementation class for the Booking entity.
    
    ![Select transport request](images/w4u3_06_03.png)
 
-5. Check the generated code template of the Travel BIL:
+5. Check the generated code template of the Bookin BIL:
 
    for example you see  
    - a delete method that will be called when deleting a booking entity and 
