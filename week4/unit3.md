@@ -1394,8 +1394,6 @@ METHOD rba_Travel.
 
   ENDMETHOD.
 
-ENDCLASS.
-
 </pre>
 
 Save ![Save](images/adt_save.png) and Activate ![Activate](images/adt_activate.png) your changes 
