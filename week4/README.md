@@ -37,7 +37,7 @@ There is no hands-on exercise available for this unit, but you can watch the [co
 ## Week 4 Unit 3:	Defining and Implementing the Business Object Behavior 
 [Link to the hands-on exercise.](unit3.md)
         
-## Week 3 Unit 4:	Creating the Business Object Projection
+## Week 4 Unit 4:	Creating the Business Object Projection
 [Link to the hands-on exercise.](unit4.md)
         
 ## Week 4 Unit 5:	Building and Previewing the OData UI Service
