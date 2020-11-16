@@ -6,7 +6,7 @@
 ## Introduction
 In the present  exercise, you will expose your projected CDS data model as OData service using business services – i.e. service definition and service binding.  
     
-You can watch [week 6 unit 6: Creating and Previewing the OData UI Service](https://open.sap.com/courses/cp13/items/1Q2sDNNIMgTA0IEDL6RUT3) on the openSAP platform.
+You can watch [week 2 unit 6: Creating and Previewing the OData UI Service](https://open.sap.com/courses/cp13/items/1Q2sDNNIMgTA0IEDL6RUT3) on the openSAP platform.
 
 > **Hints and Tips**    
 > Speed up the typing by making use of the Code Completion feature (shortcut *Ctrl+Space*) and the prepared code snippets provided. 
