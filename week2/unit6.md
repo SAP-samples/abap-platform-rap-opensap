@@ -89,7 +89,7 @@ Now, create the service binding **`ZUI_RAP_TRAVEL_O2_####`** (where `####` is yo
 
 2.	Maintain **`ZUI_RAP_TRAVEL_O2_####`**  as name and a meaningful description (e.g. _`OData V2 UI service for SAP Fiori Travel App`_).     Select **`OData V2 - UI`** as Binding Type and choose **Next >** to continue.  
      
-    >Note: At the creation time of this document, only OData V2 is currently supported. However, OData V4 is planned in the near future.
+    >Note: At the creation time of this document, only OData V2 was supported. However, OData V4 is planned in the near future.
     >For more information, check out the [ABAP platform road map](https://roadmaps.sap.com/board?range=CURRENT-LAST&PRODUCT=6EAE8B28C5D91EDA9FF40F3CC2DBE0E6&PRODUCT=73555000100800001164).  
     
     ![Create Service Binding](images/w2u6_02_02.png)
