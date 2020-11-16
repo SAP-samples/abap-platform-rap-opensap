@@ -6,7 +6,7 @@
 ## Introduction
 In the present  exercise, you will expose your projected CDS data model as OData service using business services – i.e. service definition and service binding.  
     
-You can watch [week 2 unit 6: Creating and Previewing the OData UI Service](https://open.sap.com/courses/cp13/items/1Q2sDNNIMgTA0IEDL6RUT3) on the openSAP platform.
+You can watch [week 6 unit 6: Creating and Previewing the OData UI Service](https://open.sap.com/courses/cp13/items/1Q2sDNNIMgTA0IEDL6RUT3) on the openSAP platform.
 
 > **Hints and Tips**    
 > Speed up the typing by making use of the Code Completion feature (shortcut *Ctrl+Space*) and the prepared code snippets provided. 
@@ -104,7 +104,7 @@ Now, create the service binding **`ZUI_RAP_TRAVEL_O2_####`** (where `####` is yo
 
 4. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the service binding.	
 
-5. Click on **`Activate`** - or **`Publish`** depending on your ABAP release - in the **Service Version Details** area to activate the Local Service Endpoint. This may take few seconds.
+5. Click on **`Activate`** - or **`Publish`** depending on your ADT version - in the **Service Version Details** area to activate the Local Service Endpoint. This may take few seconds.
  
     ![Create Service Binding](images/w2u6_02_05.png)
 
