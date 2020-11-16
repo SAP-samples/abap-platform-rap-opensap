@@ -235,7 +235,7 @@ What is now left is to create two control structures **`zsrap_travel_x_####`**  
    ![Add structure](images/w4u3_01_17.png)
 
 <pre>
-@EndUserText.label : 'Flag structure for Travel data'
+@EndUserText.label : 'Control structure for Travel data'
 @AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
 define structure zsrap_travel_x_#### {
   agency_id     : xsdboolean;
