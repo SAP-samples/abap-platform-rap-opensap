@@ -2,7 +2,15 @@
 
 ## Introduction  
 On the SAP Gateway demo system ES5 we have created an OData service that provides a list of travel agencies. 
-We will use this OData service to show how a side-by-side extension scenario based on the managed application, that has been built in week 2 and 3, can be developed.
+We will use this OData service to show how a side-by-side extension scenario based on the managed application, that has been built in week 2 and 3, can be developed.  
+
+For this we will create a so called **Service Consumption Model**.  
+
+The wizard that we will use to create a **Service Consumption Model** will generate additional repository objects, namely a   
+- **Service Definition** and an 
+- **Abstract Entity**   
+
+in addition to the **Service Consumption Model**.
 
 You can watch [unit 2 of week 5: Creating the Service Consumption Model](https://open.sap.com/courses/cp13/items/6iQF7ZB5Fhe6MBLun2fy99) on the openSAP.com platform.
  
