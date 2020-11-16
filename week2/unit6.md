@@ -104,7 +104,7 @@ Now, create the service binding **`ZUI_RAP_TRAVEL_O2_####`** (where `####` is yo
 
 4. Save ![save icon](images/adt_save.png) and activate ![activate icon](images/adt_activate.png) the service binding.	
 
-5. Click on **`Activate`** - or **`Publish`** depending on your ADT version - in the **Service Version Details** area to activate the Local Service Endpoint. This may take few seconds.
+5. Click on **`Publish`** - or **`Activate`** depending on your ADT version - in the **Service Version Details** area to activate the Local Service Endpoint. This may take few seconds.
  
     ![Create Service Binding](images/w2u6_02_05.png)
 
