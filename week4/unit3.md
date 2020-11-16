@@ -281,7 +281,7 @@ define structure zsrap_travel_x_#### {
    ![Add structure](images/w4u3_01_21.png)
 
 <pre>
-@EndUserText.label : 'Input flag structure for node Booking'
+@EndUserText.label : 'control structure for Booking'
 @AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
 define structure zsrap_booking_x_#### {
   booking_date  : xsdboolean;
