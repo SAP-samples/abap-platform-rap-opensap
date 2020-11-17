@@ -103,11 +103,17 @@ define service ZUI_RAP_Travel_U_#### {
     
 4. The Service Binding dialogue opens and we notice that the Service Binding must be activated so that we can test it.
 
-   - Press **Activate**  (or in newer releases **Publish**)
+   - Press ![Activate](/images/adt_activate.png)  
    
    ![Create root projection view](images/w4u5_02_04.png)
 
-5. The activation takes a while ...
+5. Publish the Service Binding
+
+   - Press **Publish**
+   
+   ![Create root projection view](images/w4u5_02_04a.png)
+
+6. Publishing the service takes a while ...
  
    ![Create root projection view](images/w4u5_02_05.png)
 
