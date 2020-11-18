@@ -51,7 +51,7 @@ define custom entity zce_rap_agency_####
    
 2. Change the coding of the assocation **`_Agency`**. 
 
-   In this step we change the coding for the association **`_Agency`** so that it does not use anymore the CDS view **`/DMO/I_Agency`** but instead our newly created custom entity **`zrap_ce_agency_####`**.
+   In this step we change the coding for the association **`_Agency`** so that it does not use anymore the CDS view **`/DMO/I_Agency`** but instead our newly created custom entity **`zce_rap_agency_####`**.
 
 <pre>
   //association [0..1] to /DMO/I_Agency       as _Agency   on $projection.AgencyID = _Agency.AgencyID
@@ -92,7 +92,7 @@ define root view entity ZC_RAP_Travel_1234
       @Search.defaultSearchElement: true
       TravelID,
       <b>//@Consumption.valueHelpDefinition: [{ entity: { name: '/DMO/I_Agency', element: 'AgencyID'} }]
-      @Consumption.valueHelpDefinition: [{ entity : {name: 'zrap_ce_agency_####', element: 'AgencyId' } }]</b>
+      @Consumption.valueHelpDefinition: [{ entity : {name: 'zce_rap_agency_####', element: 'AgencyId' } }]</b>
       <b>//@ObjectModel.text.element: ['AgencyName']</b>
       @Search.defaultSearchElement: true
       AgencyID,
