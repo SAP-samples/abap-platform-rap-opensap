@@ -148,7 +148,6 @@ Replace the code of the travel data definition in the editor with the code snipp
 
 <pre>
 @EndUserText.label: 'Travel data'
-@Metadata.ignorePropagatedAnnotations: true
 
 define root view entity ZI_RAP_Travel_U_####
   as select from /dmo/travel as Travel
