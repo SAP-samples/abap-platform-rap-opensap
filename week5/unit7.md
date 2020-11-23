@@ -150,7 +150,7 @@ If you want to suppress that value helps are published, you would have to specif
 
 In the first part of this unit you have learned what needs to be done to publish a service bindig for a Web API.
 
-Since the second part of the demo, the creation of a communication arrangement cannot be performed on a trial system we have not provided these steps as a how to guide script.
+**Since the second part of the demo, the creation of a communication arrangement cannot be performed on a trial system we have not provided these steps as a how to guide script.**
 
 You can watch the second part in the video [unit 7 of week 5: Creating and Previewing the OData Web API](https://open.sap.com/courses/cp13/items/4BZVcodS1ChsBJFZCM427x) on the openSAP.com platform.
 
