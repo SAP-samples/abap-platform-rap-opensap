@@ -368,7 +368,7 @@ CLASS zcl_generate_week2_#### IMPLEMENTATION.
                      data_element      = 'mandt'
                      is_key    = 'X'
                      not_null  = 'X' )
-                   ( field = 'booking_uuid '
+                   ( field = 'booking_uuid'
                      data_element      = 'sysuuid_x16'
                      is_key    = 'X'
                      not_null  = 'X' )
