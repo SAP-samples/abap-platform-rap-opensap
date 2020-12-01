@@ -1,0 +1,4 @@
+@EndUserText.label: 'test'
+define service ZAPI_RAP_Travel_#### {
+  expose ZC_RAP_Travel_#### as Travel;
+}
