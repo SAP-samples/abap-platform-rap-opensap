@@ -139,7 +139,7 @@ If you want to suppress that value helps are published, you would have to specif
    
     The Service Binding first needs to be activated. 
 
-    ![Activate Service Binding](images/w5u7_05_41.png)
+    ![Activate Service Binding](images/w5u7_05_40.png)
 
  5. Publish the service binding
  
