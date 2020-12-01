@@ -1,6 +1,6 @@
 # Creating and Previewing the OData Web API
 
-This hands on script only shows the first part of the viedo for unit 7 since the second part that shows the creation of a 
+This hands on script only shows the first part of the viedo for unit 7 since the second part that shows the creation of a Communication Arrangement cannot be performed in a trial system.
 
 ## Introduction  
 
