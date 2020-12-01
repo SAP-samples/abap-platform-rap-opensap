@@ -3,7 +3,7 @@
 ## Introduction  
 Since we want to use the results of the remote OData service that provides a list of travel agencies in our managed travel app that we created in week 2 and 3 we will create a custom entity. 
 
-In constrast to "normal" CDS views that read data from the database from tables or other CDS views the so called custom entities act as a wrapper for a code based implementation that provides the data instead of a database table or a CDS view.   
+In contrast to "normal" CDS views that read data from the database from tables or other CDS views the so called custom entities act as a wrapper for a code based implementation that provides the data instead of a database table or a CDS view.   
 
 The custom entity has to be created manually and it uses a similar syntax as the abstract entity that has been created when we have created our service consumption model.  
 
