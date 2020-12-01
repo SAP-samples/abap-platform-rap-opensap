@@ -147,9 +147,13 @@ If you want to suppress that value helps are published, you would have to specif
     
     ![Publish Service Binding](images/w5u7_05_41.png)
 
-    Please note that for Web API's search helps are NOT published automatiscallly as well.
+    Please note that also for Web API's of binding type OData V2 search helps are published automatiscallly as well.  
 
-    ![Published Service Binding](images/w5u7_05_42.png)
+    ![Published Service Binding OData V2 Web API](images/w5u7_05_42.png)
+
+    This behavior has changed with OData V4 where the binding type OData V4 - Web API does NOT publish value helps automatically anymore.  
+
+    ![Published Service Binding OData V4 Web API](images/w5u7_05_43.png)
 
 ## Summary
 
