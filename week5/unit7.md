@@ -87,7 +87,7 @@ Let’s get started.
 <pre>
 @EndUserText.label: 'API scenario'
 define service ZAPI_RAP_Travel_#### {
-    expose ZC_RAP_Travel_####; 
+    expose ZC_RAP_Travel_#### as Travel; 
     
 }
 </pre>
