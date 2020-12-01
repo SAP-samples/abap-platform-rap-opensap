@@ -148,7 +148,7 @@ If you want to suppress that value helps are published, you would have to specif
 
 ## Summary
 
-In the first part of this unit you have learned what needs to be done to publish a service bindig for a Web API.
+In the first part of this unit you have learned what needs to be done to publish a service binding for a Web API.
 
 **Since the second part of the demo, the creation of a communication arrangement cannot be performed on a trial system we have not provided these steps as a how to guide script.**
 
