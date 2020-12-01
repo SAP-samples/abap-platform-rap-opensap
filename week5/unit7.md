@@ -127,24 +127,29 @@ If you want to suppress that value helps are published, you would have to specif
    - Binding Type: `OData V2 - Web API`
    - Service Defintion: `ZAPI_RAP_TRAVEL_####`
    
-   and press **Finish**    
-   
-   
+   and press **Next**    
+      
     ![Create Service Definition](images/w5u7_05_03.png)
 
- 3. Activate your changes  
- 
- 3. Select a transport request
+ 3. Select a transport request and press **Finish**
  
     ![Create Service Definition](images/w5u7_05_04.png)
 
- 
- 4. Publish (Activate) the service binding
- 
-    ![Create Service Definition](images/w5u7_05_05.png)
+ 4. Activate the Service Binding  
+   
+    The Service Binding first needs to be activated. 
 
-    Please note that at the time of writing of this tutorial also for Web API's search helps were published automatiscallly as well.
+    ![Activate Service Binding](images/w5u7_05_41.png)
 
+ 5. Publish the service binding
+ 
+    After the Service Binding has been activated you can press the **Publish** button to publish the Service Binding.
+    
+    ![Publish Service Binding](images/w5u7_05_41.png)
+
+    Please note that for Web API's search helps are NOT published automatiscallly as well.
+
+    ![Published Service Binding](images/w5u7_05_42.png)
 
 ## Summary
 
