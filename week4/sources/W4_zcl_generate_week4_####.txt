@@ -1,4 +1,4 @@
-CLASS zcl_generate_week4_5678 DEFINITION
+CLASS zcl_generate_week4_#### DEFINITION
     PUBLIC
   INHERITING FROM cl_xco_cp_adt_simple_classrun
   FINAL
@@ -15,8 +15,8 @@ CLASS zcl_generate_week4_5678 DEFINITION
 
     METHODS get_json_string RETURNING VALUE(json_string) TYPE string.
 
-    DATA package_name  TYPE sxco_package VALUE  'ZRAP_TRAVEL_5678'.
-    DATA unique_number TYPE string VALUE '5678'.
+    DATA package_name  TYPE sxco_package VALUE  'ZRAP_TRAVEL_####'.
+    DATA unique_number TYPE string VALUE '####'.
     DATA dev_system_environment TYPE REF TO if_xco_cp_gen_env_dev_system.
     DATA transport TYPE    sxco_transport .
 
@@ -33,27 +33,19 @@ CLASS zcl_generate_week4_5678 DEFINITION
 
 
 
-CLASS zcl_generate_week4_5678 IMPLEMENTATION.
+CLASS zcl_generate_week4_#### IMPLEMENTATION.
 
   METHOD main.
 
-  package_name = to_upper( package_name ).
+    package_name = to_upper( package_name ).
 
     DATA(lo_package) = xco_cp_abap_repository=>object->devc->for( package_name ).
-    DATA(lv_package_software_component) = lo_package->read( )-property-software_component->name.
-    DATA(lo_transport_layer) = lo_package->read(  )-property-transport_layer.
-    DATA(lo_transport_target) = lo_transport_layer->get_transport_target( ).
-    DATA(lv_transport_target) = lo_transport_target->value.
-    DATA(lo_transport_request) = xco_cp_cts=>transports->workbench( lo_transport_target->value  )->create_request( | create tables |  ).
-    DATA(lv_transport) = lo_transport_request->value.
-    transport = lv_transport.
-    dev_system_environment = xco_cp_generation=>environment->dev_system( lv_transport ).
 
     IF NOT lo_package->exists( ).
 
-      RAISE EXCEPTION TYPE zcx_rap_generator
+      RAISE EXCEPTION TYPE /dmo/cx_rap_generator
         EXPORTING
-          textid   = zcx_rap_generator=>package_does_not_exist
+          textid   = /dmo/cx_rap_generator=>package_does_not_exist
           mv_value = CONV #( package_name ).
 
     ENDIF.
@@ -83,6 +75,7 @@ CLASS zcl_generate_week4_5678 IMPLEMENTATION.
                   '  "prefix": "RAP_",' && |\r\n|  &&
                   |  "package": "{ package_name }",| && |\r\n|  &&
                   '  "datasourcetype": "table",' && |\r\n|  &&
+                  '  "bindingtype": "odata_v2_ui",' && |\r\n|  &&
                   '  "hierarchy": {' && |\r\n|  &&
                   '    "entityName": "Travel",' && |\r\n|  &&
                   '    "dataSource": "/dmo/travel",' && |\r\n|  &&
