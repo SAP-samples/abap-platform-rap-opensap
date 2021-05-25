@@ -15,7 +15,7 @@ CLASS zcl_generate_week4_#### DEFINITION
 
     METHODS get_json_string RETURNING VALUE(json_string) TYPE string.
 
-    DATA package_name  TYPE sxco_package VALUE  'ZRAP_TRAVEL_####'.
+    DATA package_name  TYPE sxco_package VALUE  'ZRAP_TRAVEL_U_####'.
     DATA unique_number TYPE string VALUE '####'.
     DATA dev_system_environment TYPE REF TO if_xco_cp_gen_env_dev_system.
     DATA transport TYPE    sxco_transport .
