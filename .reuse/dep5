@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: [YOUR REPO NAME]
-Upstream-Contact: [YOUR EMAIL ADDRESS]
-Source: https://github.com/sap-samples/[YOUR REPO NAME]
+Upstream-Name: abap-platform-rap-opensap
+Upstream-Contact: Andre Fischer (andre.fischer@sap.com)
+Source: https://github.com/sap-samples/abap-platform-rap-opensap
 Disclaimer: The code in this project may include calls to APIs (“API Calls”) of
  SAP or third-party products or services developed outside of this project
  (“External Products”).
@@ -25,5 +25,5 @@ Disclaimer: The code in this project may include calls to APIs (“API Calls”)
  parties the right to use of access any SAP External Product, through API Calls.
 
 Files: *
-Copyright: 2020 SAP SE or an SAP affiliate company and [YOUR REPO NAME] contributors
+Copyright: 2020 SAP SE or an SAP affiliate company and abap-platform-rap-opensap contributors
 License: Apache-2.0
