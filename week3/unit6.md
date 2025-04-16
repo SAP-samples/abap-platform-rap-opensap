@@ -222,7 +222,7 @@ _Project_, _Package_ and _Behavior Definition_ have been automatically assigned.
     ![Implement the Behavior Pool – Travel Entity](images/w3u6_03_05.png)
     
     On the _**Global Class**_ tab, you can see the addition **`FOR BEHAVIOR OF`** which indicates that this class provides the behavior implementation of the specified business object - travel entity in the present case.  
-    The proper implementation takes place on the _**Local Types**_ tab where the wizard has generated the local handler class **`lhc_hanler`** inheriting from cl_abap_behavior_handler.
+    The proper implementation takes place on the _**Local Types**_ tab where the wizard has generated the local handler class **`lhc_Travel`** inheriting from cl_abap_behavior_handler.
     
 5.	On the _**Local Types**_ tab, add the constants for the travel status in the **`PRIVATE SECTION`**:
     
