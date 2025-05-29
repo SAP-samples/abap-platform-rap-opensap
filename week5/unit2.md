@@ -196,7 +196,7 @@ CLASS zcl_ce_rap_agency_#### DEFINITION
   CREATE PUBLIC .
 
   PUBLIC SECTION.
-    INTERFACES if_oo_adt_classrun.
+    INTERFACES if_oo_adt_classrun.    
 
     METHODS get_agencies
       IMPORTING
@@ -206,7 +206,7 @@ CLASS zcl_ce_rap_agency_#### DEFINITION
         is_data_requested  TYPE abap_bool
         is_count_requested TYPE abap_bool
       EXPORTING
-        business_data      TYPE zrap_travel_e_rnc=>tyt_z_travel_agency_es_5_type
+        business_data      TYPE zsc_rap_agency_####=>tyt_z_travel_agency_es_5_type
         count              TYPE int8
       RAISING
         /iwbep/cx_cp_remote
@@ -225,7 +225,7 @@ CLASS zcl_ce_rap_agency_#### IMPLEMENTATION.
 
   METHOD if_oo_adt_classrun~main.    
     
-    DATA business_data TYPE zrap_travel_e_rnc=>tyt_z_travel_agency_es_5_type.
+    DATA business_data TYPE zsc_rap_agency_####=>tyt_z_travel_agency_es_5_type.
     DATA count TYPE int8.
     DATA filter_conditions  TYPE if_rap_query_filter=>tt_name_range_pairs .
     DATA ranges_table TYPE if_rap_query_filter=>tt_range_option .
