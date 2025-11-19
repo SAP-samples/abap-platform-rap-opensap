@@ -1,3 +1,9 @@
+> [!CAUTION]
+> Please note that the associated openSAP course **Building Apps with the ABAP RESTful Application Programming Model (RAP)** is no longer available, and the exercises in this GitHub repository are not up to date.
+> 
+> Getting-started materials can be found on the SAP Community topic page [**ABAP RESTful Application Programming Model (RAP)↗**](https://pages.community.sap.com/topics/abap/rap#learn-develop).
+
+
 # READme file for WEEK 2: DEVELOPING A READ-ONLY LIST REPORT APP
 In week 2, you are going to build a read-only SAP Fiori elements based Travel List Report app.
 
