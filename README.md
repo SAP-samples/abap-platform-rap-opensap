@@ -2,9 +2,9 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/abap-platform-rap-opensap)](https://api.reuse.software/info/github.com/SAP-samples/abap-platform-rap-opensap)    
 
 > [!CAUTION]
-> Please note that the associated openSAP course "_Building Apps with the ABAP RESTful Application Programming Model (RAP)_" is no longer available and the exercises in this Git repository not up-to-date.
+> Please note that the associated openSAP course **Building Apps with the ABAP RESTful Application Programming Model (RAP)** is no longer available, and the exercises in this GitHub repository are not up to date.
 > 
-> Find getting-started materials on the SAP Community topic page [**ABAP RESTful Application Programming Model (RAP)↗**](https://pages.community.sap.com/topics/abap/rap#learn-develop).
+> Getting-started materials can be found on the SAP Community topic page [**ABAP RESTful Application Programming Model (RAP)↗**](https://pages.community.sap.com/topics/abap/rap#learn-develop).
 > 
 
 ## Description
