@@ -1,3 +1,8 @@
+> [!CAUTION]
+> Please note that the associated openSAP course **Building Apps with the ABAP RESTful Application Programming Model (RAP)** is no longer available, and the exercises in this GitHub repository are not up to date.
+> 
+> Getting-started materials can be found on the SAP Community topic page [**ABAP RESTful Application Programming Model (RAP)↗**](https://pages.community.sap.com/topics/abap/rap#learn-develop).
+
 # README file for WEEK 3: ENABLING THE TRANSACTIONAL BEHAVIOR OF AN APP
 In week 3, you are going to enable the Travel app built in [week 2](../week2/README.md) for transactional handling.   
 
