@@ -97,7 +97,7 @@ Let’s start with adding a projection layer on our CDS interface views.
    ![Create root projection view](images/w4u4_01_09.png)
    
 
-Your Travel prpjection view should now look as follows:
+Your Travel projection view should now look as follows:
 
 <pre>
     @EndUserText.label: 'Travel data'
