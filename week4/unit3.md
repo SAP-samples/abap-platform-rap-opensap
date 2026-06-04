@@ -646,7 +646,7 @@ Further down we see the coding of the method `class_setup`, this method creates 
 
 ![Implementation of test class](images/w4u3_01_34.png)
 
-## Step5. Implement the remaining methods for the Travel entity
+## Step 5. Implement the remaining methods for the Travel entity
 
 What is now left is the implementation of all the other methods. Please replace the methods in your class with copy and paste from the code sections below.
 
