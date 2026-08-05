@@ -1,3 +1,9 @@
+> [!CAUTION]
+> Please note that the associated openSAP course **Building Apps with the ABAP RESTful Application Programming Model (RAP)** is no longer available, and the exercises in this GitHub repository are not up to date.
+> 
+> Getting-started materials can be found on the SAP Community topic page [**ABAP RESTful Application Programming Model (RAP)↗**](https://pages.community.sap.com/topics/abap/rap), for example under [Learn & Develop](https://pages.community.sap.com/topics/abap/rap#learn-develop).
+
+
 # Readme file for WEEK 1: INTRODUCTION - ABAP RESTful APPLICATION PROGRAMMING MODEL (RAP)
 In week 1, we introduce RAP, its architecture and involved technologies.
 Hands-on excersises are starting with unit 5, where you are going to set up your ABAP developement environment and write your first _Hello World_ console app.
